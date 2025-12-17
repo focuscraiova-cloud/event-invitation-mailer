@@ -20,16 +20,16 @@ const Index = () => {
 
       {/* CTA Buttons */}
       <div className="flex flex-col sm:flex-row gap-4">
-        <Button 
-          variant="outline" 
+        <Button
+          variant="outline"
           className="border-white text-white hover:bg-white hover:text-black transition-all duration-300 px-8 py-6 text-sm uppercase tracking-wider"
-          onClick={() => window.open('https://focusevents.ro/signup', '_blank')}
+          onClick={() => window.open("https://focusevents.ro/signup", "_blank")}
         >
           Sign Up
         </Button>
-        <Button 
+        <Button
           className="bg-white text-black hover:bg-gray-200 transition-all duration-300 px-8 py-6 text-sm uppercase tracking-wider"
-          onClick={() => window.open('https://focusevents.ro/tickets', '_blank')}
+          onClick={() => window.open("https://www.livetickets.ro/e/0a90594", "_blank")}
         >
           Tickets Here
         </Button>
