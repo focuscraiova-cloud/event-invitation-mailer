@@ -16,153 +16,100 @@
     </noscript>
     <![endif]-->
     <style>
-        /* Reset styles */
+        @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Bebas+Neue&family=Poppins:wght@400;600;700&display=swap');
+        
         body, table, td, a { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
         table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
         img { -ms-interpolation-mode: bicubic; border: 0; height: auto; line-height: 100%; outline: none; text-decoration: none; }
-        body { height: 100% !important; margin: 0 !important; padding: 0 !important; width: 100% !important; background-color: #1a0a0a; }
+        body { height: 100% !important; margin: 0 !important; padding: 0 !important; width: 100% !important; background-color: #0d3320; }
         
-        /* iOS blue links */
-        a[x-apple-data-detectors] { color: inherit !important; text-decoration: none !important; font-size: inherit !important; font-family: inherit !important; font-weight: inherit !important; line-height: inherit !important; }
+        a[x-apple-data-detectors] { color: inherit !important; text-decoration: none !important; }
+        u + #body a { color: inherit; text-decoration: none; }
+        #MessageViewBody a { color: inherit; text-decoration: none; }
         
-        /* Gmail blue links */
-        u + #body a { color: inherit; text-decoration: none; font-size: inherit; font-family: inherit; font-weight: inherit; line-height: inherit; }
-        
-        /* Samsung Mail blue links */
-        #MessageViewBody a { color: inherit; text-decoration: none; font-size: inherit; font-family: inherit; font-weight: inherit; line-height: inherit; }
-        
-        /* Responsive styles */
         @media screen and (max-width: 600px) {
             .mobile-padding { padding: 20px !important; }
             .mobile-stack { display: block !important; width: 100% !important; }
             .mobile-center { text-align: center !important; }
-            .mobile-font-large { font-size: 28px !important; line-height: 34px !important; }
-            .mobile-font-medium { font-size: 18px !important; line-height: 24px !important; }
+            .mobile-title { font-size: 48px !important; }
+            .mobile-subtitle { font-size: 32px !important; }
         }
     </style>
 </head>
-<body id="body" style="margin: 0 !important; padding: 0 !important; background-color: #1a0a0a;">
+<body id="body" style="margin: 0 !important; padding: 0 !important; background-color: #0d3320;">
     
-    <!-- Preview text -->
-    <div style="display: none; font-size: 1px; color: #1a0a0a; line-height: 1px; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden;">
-        Join us for Christmas Flashbacks - A night of classic R&B, Rare Groove & Soul at BFI Southbank on Tuesday 24th December!
+    <div style="display: none; font-size: 1px; color: #0d3320; line-height: 1px; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden;">
+        🎄 Join us for Christmas Flashbacks - A Pop-Up Party on Tuesday 24th December at BFI Southbank! Classic R&B, Rare Groove & Soul 🎅
     </div>
     
-    <!-- Main wrapper -->
-    <table border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #1a0a0a;">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%" style="background: repeating-linear-gradient(90deg, #0d3320 0px, #0d3320 3px, #0a2819 3px, #0a2819 6px);">
         <tr>
-            <td align="center" style="padding: 40px 10px;">
+            <td align="center" style="padding: 20px 10px;">
                 
-                <!-- Email container -->
-                <table border="0" cellpadding="0" cellspacing="0" width="600" style="max-width: 600px; background: linear-gradient(180deg, #2d1515 0%, #1a0a0a 100%); border-radius: 12px; overflow: hidden;">
+                <table border="0" cellpadding="0" cellspacing="0" width="600" style="max-width: 600px;">
                     
-                    <!-- Header with decorative elements -->
+                    <!-- Decorative snowflakes header -->
                     <tr>
-                        <td align="center" style="padding: 30px 40px 20px 40px; background: linear-gradient(135deg, #8B0000 0%, #4a0000 100%);">
-                            <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                                <tr>
-                                    <td align="center">
-                                        <!-- Decorative stars -->
-                                        <p style="margin: 0; font-size: 24px; letter-spacing: 8px;">✦ ✦ ✦</p>
-                                        <h1 style="margin: 15px 0 5px 0; font-family: Georgia, 'Times New Roman', serif; font-size: 42px; font-weight: bold; color: #FFD700; text-transform: uppercase; letter-spacing: 3px; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);" class="mobile-font-large">
-                                            Christmas Flashbacks
-                                        </h1>
-                                        <p style="margin: 0; font-family: Arial, sans-serif; font-size: 14px; color: #ffffff; letter-spacing: 4px; text-transform: uppercase;">
-                                            You're Invited
-                                        </p>
-                                    </td>
-                                </tr>
-                            </table>
+                        <td align="center" style="padding: 20px 0; font-size: 28px; letter-spacing: 15px;">
+                            ❄️ 🎄 ❄️ 🔔 ❄️ 🎄 ❄️
                         </td>
                     </tr>
                     
-                    <!-- Event details -->
+                    <!-- Main title section -->
                     <tr>
-                        <td align="center" style="padding: 40px 40px 30px 40px;" class="mobile-padding">
-                            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                        <td align="center" style="padding: 20px 40px;" class="mobile-padding">
+                            <!-- Christmas script text -->
+                            <p style="margin: 0; font-family: 'Pacifico', cursive, Georgia, serif; font-size: 52px; color: #e63946; text-shadow: 3px 3px 0px #8B0000, -1px -1px 0px #ff6b6b; transform: rotate(-3deg);" class="mobile-title">
+                                Christmas
+                            </p>
+                            <!-- FLASHBACKS bold text -->
+                            <h1 style="margin: -10px 0 0 0; font-family: 'Bebas Neue', Impact, sans-serif; font-size: 72px; font-weight: 900; color: #ffffff; text-transform: uppercase; letter-spacing: 4px; text-shadow: 4px 4px 0px #000000;" class="mobile-subtitle">
+                                FLASHBACKS
+                            </h1>
+                            <!-- Subtitle -->
+                            <p style="margin: 10px 0 0 0; font-family: 'Poppins', Arial, sans-serif; font-size: 13px; color: #ffffff; letter-spacing: 4px; text-transform: uppercase;">
+                                — A Pop-Up Party —
+                            </p>
+                        </td>
+                    </tr>
+                    
+                    <!-- Decorative ornaments -->
+                    <tr>
+                        <td align="center" style="padding: 10px 0; font-size: 24px; letter-spacing: 20px;">
+                            🎅 🪩 🎁 🪩 🎅
+                        </td>
+                    </tr>
+                    
+                    <!-- Event details card -->
+                    <tr>
+                        <td align="center" style="padding: 20px 30px;" class="mobile-padding">
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%" style="background: rgba(0,0,0,0.4); border-radius: 16px; border: 2px solid rgba(255,215,0,0.3);">
                                 <tr>
-                                    <td align="center">
-                                        <p style="margin: 0 0 25px 0; font-family: Georgia, 'Times New Roman', serif; font-size: 22px; color: #FFD700; font-style: italic;" class="mobile-font-medium">
-                                            A Night of Classic R&B, Rare Groove & Soul
+                                    <td align="center" style="padding: 30px;">
+                                        <!-- Date -->
+                                        <p style="margin: 0 0 5px 0; font-family: 'Poppins', Arial, sans-serif; font-size: 14px; color: #FFD700; text-transform: uppercase; letter-spacing: 3px;">
+                                            Tuesday
                                         </p>
-                                        
-                                        <!-- Date box -->
-                                        <table border="0" cellpadding="0" cellspacing="0" style="background-color: rgba(139, 0, 0, 0.3); border: 2px solid #8B0000; border-radius: 8px; margin-bottom: 25px;">
-                                            <tr>
-                                                <td align="center" style="padding: 20px 40px;">
-                                                    <p style="margin: 0 0 5px 0; font-family: Arial, sans-serif; font-size: 14px; color: #cccccc; text-transform: uppercase; letter-spacing: 2px;">
-                                                        Tuesday
-                                                    </p>
-                                                    <p style="margin: 0; font-family: Georgia, 'Times New Roman', serif; font-size: 36px; font-weight: bold; color: #ffffff;">
-                                                        24th December
-                                                    </p>
-                                                    <p style="margin: 5px 0 0 0; font-family: Arial, sans-serif; font-size: 16px; color: #FFD700;">
-                                                        Christmas Eve
-                                                    </p>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                        
-                                        <!-- Venue -->
-                                        <p style="margin: 0 0 8px 0; font-family: Arial, sans-serif; font-size: 20px; font-weight: bold; color: #ffffff;">
-                                            BFI Southbank
+                                        <p style="margin: 0; font-family: 'Bebas Neue', Impact, sans-serif; font-size: 48px; color: #ffffff; letter-spacing: 2px;">
+                                            24 DECEMBER
                                         </p>
-                                        <p style="margin: 0 0 25px 0; font-family: Arial, sans-serif; font-size: 14px; color: #aaaaaa;">
-                                            Belvedere Road, South Bank, London SE1 8XT
+                                        <p style="margin: 5px 0 20px 0; font-family: 'Poppins', Arial, sans-serif; font-size: 18px; color: #e63946; font-weight: 600;">
+                                            Christmas Eve 🎄
                                         </p>
                                         
                                         <!-- Time -->
-                                        <table border="0" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom: 30px;">
+                                        <table border="0" cellpadding="0" cellspacing="0" style="margin: 0 auto 20px auto;">
                                             <tr>
-                                                <td align="center">
-                                                    <table border="0" cellpadding="0" cellspacing="0">
-                                                        <tr>
-                                                            <td style="padding: 0 20px; text-align: center;">
-                                                                <p style="margin: 0 0 5px 0; font-family: Arial, sans-serif; font-size: 12px; color: #888888; text-transform: uppercase;">Doors Open</p>
-                                                                <p style="margin: 0; font-family: Georgia, serif; font-size: 24px; color: #ffffff;">9:00 PM</p>
-                                                            </td>
-                                                            <td style="padding: 0 20px; border-left: 1px solid #444444; text-align: center;">
-                                                                <p style="margin: 0 0 5px 0; font-family: Arial, sans-serif; font-size: 12px; color: #888888; text-transform: uppercase;">Until</p>
-                                                                <p style="margin: 0; font-family: Georgia, serif; font-size: 24px; color: #ffffff;">3:00 AM</p>
-                                                            </td>
-                                                        </tr>
-                                                    </table>
+                                                <td style="background: #FFD700; border-radius: 8px; padding: 12px 25px;">
+                                                    <p style="margin: 0; font-family: 'Bebas Neue', Impact, sans-serif; font-size: 22px; color: #0d3320; letter-spacing: 1px;">
+                                                        9:00 PM — 3:00 AM
+                                                    </p>
                                                 </td>
                                             </tr>
                                         </table>
                                         
-                                        <!-- Description -->
-                                        <p style="margin: 0 0 30px 0; font-family: Arial, sans-serif; font-size: 15px; line-height: 24px; color: #cccccc;">
-                                            Step back in time this Christmas Eve for an unforgettable evening celebrating the golden era of soul music. Join fellow music lovers for a night filled with classic R&B anthems, rare groove gems, and timeless soul classics that will have you dancing until the early hours.
-                                        </p>
-                                        
-                                        <!-- CTA Button -->
-                                        <table border="0" cellpadding="0" cellspacing="0">
-                                            <tr>
-                                                <td align="center" style="border-radius: 6px; background: linear-gradient(135deg, #8B0000 0%, #B22222 100%);">
-                                                    <a href="*|TICKET_URL|*" target="_blank" style="display: inline-block; padding: 16px 45px; font-family: Arial, sans-serif; font-size: 16px; font-weight: bold; color: #ffffff; text-decoration: none; text-transform: uppercase; letter-spacing: 1px;">
-                                                        Get Your Tickets
-                                                    </a>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </td>
-                                </tr>
-                            </table>
-                        </td>
-                    </tr>
-                    
-                    <!-- DJ Lineup section -->
-                    <tr>
-                        <td align="center" style="padding: 0 40px 40px 40px;" class="mobile-padding">
-                            <table border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: rgba(0,0,0,0.3); border-radius: 8px; padding: 25px;">
-                                <tr>
-                                    <td align="center" style="padding: 25px;">
-                                        <p style="margin: 0 0 15px 0; font-family: Arial, sans-serif; font-size: 12px; color: #888888; text-transform: uppercase; letter-spacing: 3px;">
-                                            Featuring DJs
-                                        </p>
-                                        <p style="margin: 0; font-family: Georgia, 'Times New Roman', serif; font-size: 18px; color: #FFD700; line-height: 32px;">
-                                            Your Favourite DJs Spinning<br>
+                                        <!-- Music genre -->
+                                        <p style="margin: 0; font-family: 'Poppins', Arial, sans-serif; font-size: 14px; color: #aaffaa; letter-spacing: 1px;">
                                             Classic R&B • Rare Groove • Soul
                                         </p>
                                     </td>
@@ -171,40 +118,17 @@
                         </td>
                     </tr>
                     
-                    <!-- Dress code -->
+                    <!-- Venue button -->
                     <tr>
-                        <td align="center" style="padding: 0 40px 40px 40px;" class="mobile-padding">
-                            <p style="margin: 0; font-family: Arial, sans-serif; font-size: 13px; color: #888888;">
-                                <strong style="color: #FFD700;">Dress Code:</strong> Smart & Stylish • Over 25s
-                            </p>
-                        </td>
-                    </tr>
-                    
-                    <!-- Footer -->
-                    <tr>
-                        <td align="center" style="padding: 30px 40px; background-color: rgba(0,0,0,0.5); border-top: 1px solid #333333;">
-                            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                        <td align="center" style="padding: 10px 30px 20px 30px;">
+                            <table border="0" cellpadding="0" cellspacing="0" style="background: #FFD700; border-radius: 8px; border: 3px solid #0d3320;">
                                 <tr>
-                                    <td align="center">
-                                        <!-- Social links placeholder -->
-                                        <p style="margin: 0 0 15px 0; font-family: Arial, sans-serif; font-size: 13px; color: #888888;">
-                                            Follow us for updates
+                                    <td align="center" style="padding: 15px 35px;">
+                                        <p style="margin: 0; font-family: 'Bebas Neue', Impact, sans-serif; font-size: 24px; color: #0d3320; letter-spacing: 2px; text-transform: uppercase;">
+                                            BFI Southbank
                                         </p>
-                                        <p style="margin: 0 0 20px 0;">
-                                            <a href="*|FACEBOOK_URL|*" style="color: #FFD700; text-decoration: none; margin: 0 10px;">Facebook</a>
-                                            <a href="*|INSTAGRAM_URL|*" style="color: #FFD700; text-decoration: none; margin: 0 10px;">Instagram</a>
-                                            <a href="*|TWITTER_URL|*" style="color: #FFD700; text-decoration: none; margin: 0 10px;">Twitter</a>
-                                        </p>
-                                        
-                                        <!-- Unsubscribe -->
-                                        <p style="margin: 0; font-family: Arial, sans-serif; font-size: 11px; color: #666666; line-height: 18px;">
-                                            You're receiving this email because you signed up for event updates.<br>
-                                            <a href="*|UNSUB|*" style="color: #888888; text-decoration: underline;">Unsubscribe</a> | 
-                                            <a href="*|UPDATE_PROFILE|*" style="color: #888888; text-decoration: underline;">Update Preferences</a>
-                                        </p>
-                                        
-                                        <p style="margin: 20px 0 0 0; font-family: Arial, sans-serif; font-size: 11px; color: #444444;">
-                                            © 2024 Christmas Flashbacks. All rights reserved.
+                                        <p style="margin: 3px 0 0 0; font-family: 'Poppins', Arial, sans-serif; font-size: 11px; color: #0d3320;">
+                                            Belvedere Road, South Bank, London SE1 8XT
                                         </p>
                                     </td>
                                 </tr>
@@ -212,13 +136,81 @@
                         </td>
                     </tr>
                     
+                    <!-- Description -->
+                    <tr>
+                        <td align="center" style="padding: 10px 40px 30px 40px;" class="mobile-padding">
+                            <p style="margin: 0; font-family: 'Poppins', Arial, sans-serif; font-size: 15px; line-height: 26px; color: #ccffcc;">
+                                Step back in time this Christmas Eve for an unforgettable night celebrating the golden era of soul music. Dance to classic R&B anthems, rare groove gems, and timeless soul classics! 🕺💃
+                            </p>
+                        </td>
+                    </tr>
+                    
+                    <!-- CTA Button -->
+                    <tr>
+                        <td align="center" style="padding: 0 40px 30px 40px;">
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td align="center" style="border-radius: 50px; background: linear-gradient(135deg, #e63946 0%, #8B0000 100%); box-shadow: 0 8px 20px rgba(230, 57, 70, 0.4);">
+                                        <a href="*|TICKET_URL|*" target="_blank" style="display: inline-block; padding: 18px 50px; font-family: 'Bebas Neue', Impact, sans-serif; font-size: 22px; font-weight: bold; color: #ffffff; text-decoration: none; text-transform: uppercase; letter-spacing: 3px;">
+                                            🎟️ Get Your Tickets
+                                        </a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    
+                    <!-- Dress code -->
+                    <tr>
+                        <td align="center" style="padding: 0 40px 30px 40px;">
+                            <table border="0" cellpadding="0" cellspacing="0" style="background: rgba(230, 57, 70, 0.2); border-radius: 8px; border: 1px dashed #e63946;">
+                                <tr>
+                                    <td align="center" style="padding: 15px 30px;">
+                                        <p style="margin: 0; font-family: 'Poppins', Arial, sans-serif; font-size: 13px; color: #ffffff;">
+                                            <strong style="color: #FFD700;">Dress Code:</strong> Smart & Stylish ✨ <strong style="color: #FFD700;">|</strong> Over 25s
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    
+                    <!-- Decorative footer elements -->
+                    <tr>
+                        <td align="center" style="padding: 10px 0; font-size: 24px; letter-spacing: 15px;">
+                            🎄 ⭐ 🔔 ⭐ 🎄
+                        </td>
+                    </tr>
+                    
+                    <!-- Footer -->
+                    <tr>
+                        <td align="center" style="padding: 30px 40px; border-top: 1px solid rgba(255,255,255,0.1);">
+                            <p style="margin: 0 0 15px 0; font-family: 'Poppins', Arial, sans-serif; font-size: 13px; color: #aaffaa;">
+                                Follow us for updates
+                            </p>
+                            <p style="margin: 0 0 20px 0;">
+                                <a href="*|FACEBOOK_URL|*" style="color: #FFD700; text-decoration: none; margin: 0 12px; font-family: 'Poppins', Arial, sans-serif; font-size: 14px;">Facebook</a>
+                                <a href="*|INSTAGRAM_URL|*" style="color: #FFD700; text-decoration: none; margin: 0 12px; font-family: 'Poppins', Arial, sans-serif; font-size: 14px;">Instagram</a>
+                                <a href="*|TWITTER_URL|*" style="color: #FFD700; text-decoration: none; margin: 0 12px; font-family: 'Poppins', Arial, sans-serif; font-size: 14px;">Twitter</a>
+                            </p>
+                            
+                            <p style="margin: 0; font-family: 'Poppins', Arial, sans-serif; font-size: 11px; color: rgba(255,255,255,0.5); line-height: 20px;">
+                                You're receiving this because you signed up for event updates.<br>
+                                <a href="*|UNSUB|*" style="color: rgba(255,255,255,0.6); text-decoration: underline;">Unsubscribe</a> | 
+                                <a href="*|UPDATE_PROFILE|*" style="color: rgba(255,255,255,0.6); text-decoration: underline;">Update Preferences</a>
+                            </p>
+                            
+                            <p style="margin: 20px 0 0 0; font-family: 'Poppins', Arial, sans-serif; font-size: 11px; color: rgba(255,255,255,0.3);">
+                                © 2024 Christmas Flashbacks. All rights reserved. 🎄
+                            </p>
+                        </td>
+                    </tr>
+                    
                 </table>
-                <!-- End email container -->
                 
             </td>
         </tr>
     </table>
-    <!-- End main wrapper -->
     
 </body>
 </html>
