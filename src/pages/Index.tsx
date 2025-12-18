@@ -26,12 +26,7 @@ const Index = () => {
       <div className="flex flex-col sm:flex-row gap-4 animate-fade-in" style={{ animationDelay: "0.4s" }}>
         <Button
           className="bg-white/10 backdrop-blur-sm border border-white/30 text-white hover:bg-white hover:text-black hover:scale-105 active:scale-95 transition-all duration-300 px-8 py-6 text-sm uppercase tracking-wider"
-          onClick={() =>
-            window.open(
-              "https://focusevents.us6.list-manage.com/subscribe/post?u=009447cf40041bdacac0c1ff1&amp;id=595c3e61cd&amp;f_id=000c1ce2f0",
-              "_blank",
-            )
-          }
+          onClick={() => window.open("focusevents.ro/subscribe", "_blank")}
         >
           Sign Up
         </Button>
