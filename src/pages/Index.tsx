@@ -18,7 +18,7 @@ const Index = () => {
       <div className="text-center mb-8 animate-fade-in" style={{ animationDelay: "0.2s" }}>
         <p className="text-gray-400 text-sm uppercase tracking-widest mb-4">Coming Soon</p>
         <h1 className="text-2xl md:text-4xl font-light mb-2">Christmas Flashbacks</h1>
-        <p className="text-gray-500">24 December 2024 • 22:00</p>
+        <p className="text-gray-500">24 December 2025 • 22:00</p>
       </div>
 
       {/* Countdown */}
@@ -29,8 +29,7 @@ const Index = () => {
       {/* CTA Buttons */}
       <div className="flex flex-col sm:flex-row gap-4 animate-fade-in" style={{ animationDelay: "0.4s" }}>
         <Button
-          variant="outline"
-          className="border-white text-white hover:bg-white hover:text-black hover:scale-105 active:scale-95 transition-all duration-300 px-8 py-6 text-sm uppercase tracking-wider animate-glow"
+          className="bg-white/10 backdrop-blur-sm border border-white/30 text-white hover:bg-white hover:text-black hover:scale-105 active:scale-95 transition-all duration-300 px-8 py-6 text-sm uppercase tracking-wider"
           onClick={() => window.open("https://focusevents.ro/signup", "_blank")}
         >
           Sign Up
