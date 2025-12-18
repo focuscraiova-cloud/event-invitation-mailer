@@ -26,7 +26,7 @@ const Index = () => {
       <div className="flex flex-col sm:flex-row gap-4 animate-fade-in" style={{ animationDelay: "0.4s" }}>
         <Button
           className="bg-white/10 backdrop-blur-sm border border-white/30 text-white hover:bg-white hover:text-black hover:scale-105 active:scale-95 transition-all duration-300 px-8 py-6 text-sm uppercase tracking-wider"
-          onClick={() => window.open("focusevents.ro/subscribe", "_blank")}
+          onClick={() => window.open("/subscribe", "_blank")}
         >
           Sign Up
         </Button>
