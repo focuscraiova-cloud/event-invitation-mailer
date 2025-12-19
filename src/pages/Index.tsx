@@ -39,7 +39,7 @@ const Index = () => {
       </div>
 
       {/* Footer */}
-      <div className="absolute bottom-8 text-center animate-fade-in" style={{ animationDelay: "0.6s" }}>
+      <div className="mt-auto pt-12 text-center animate-fade-in" style={{ animationDelay: "0.6s" }}>
         <p className="text-gray-600 text-xs tracking-wider">focusevents.ro</p>
       </div>
     </div>
