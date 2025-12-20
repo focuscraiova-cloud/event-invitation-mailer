@@ -49,85 +49,78 @@ const Countdown = () => {
       flexDirection: 'column',
       alignItems: 'center', 
       justifyContent: 'center', 
-      gap: '1rem',
-      padding: '1rem 2rem',
+      gap: 'clamp(0.5rem, 2vw, 1rem)',
+      padding: 'clamp(0.5rem, 2vw, 1rem) clamp(0.75rem, 3vw, 2rem)',
       width: '100%',
-      boxSizing: 'border-box'
+      boxSizing: 'border-box',
+      overflow: 'hidden'
     }}>
-      <div style={{ 
-        display: 'flex', 
-        alignItems: 'center', 
-        justifyContent: 'center', 
-        gap: '0.75rem',
-        flexWrap: 'wrap',
-        maxWidth: '100%'
+      <div className="flex flex-col sm:flex-row items-center justify-center" style={{ 
+        gap: 'clamp(1rem, 3vw, 1.5rem)',
+        maxWidth: '100%',
+        width: '100%'
       }}>
         {/* Days */}
-        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem' }}>
-          <div style={{ display: 'flex', gap: '0.25rem' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 'clamp(0.25rem, 1vw, 0.5rem)', flexShrink: 0 }}>
+          <div style={{ display: 'flex', gap: 'clamp(0.1rem, 0.5vw, 0.25rem)' }}>
             <NixieDigit key={`d1-${days[0]}-${timeLeft.days}`} value={days[0]} />
             <NixieDigit key={`d2-${days[1]}-${timeLeft.days}`} value={days[1]} />
           </div>
           <span style={{ 
             color: '#e6b871', 
-            fontSize: '0.75rem', 
+            fontSize: 'clamp(0.6rem, 2vw, 0.75rem)', 
             fontFamily: 'Courier New',
             textTransform: 'uppercase',
-            letterSpacing: '0.1em'
+            letterSpacing: '0.1em',
+            whiteSpace: 'nowrap'
           }}>Days</span>
         </div>
         
-        {/* Colon */}
-        <NixieDigit key="colon1" value=":" />
-        
         {/* Hours */}
-        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem' }}>
-          <div style={{ display: 'flex', gap: '0.25rem' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 'clamp(0.25rem, 1vw, 0.5rem)', flexShrink: 0 }}>
+          <div style={{ display: 'flex', gap: 'clamp(0.1rem, 0.5vw, 0.25rem)' }}>
             <NixieDigit key={`h1-${hours[0]}-${timeLeft.hours}`} value={hours[0]} />
             <NixieDigit key={`h2-${hours[1]}-${timeLeft.hours}`} value={hours[1]} />
           </div>
           <span style={{ 
             color: '#e6b871', 
-            fontSize: '0.75rem', 
+            fontSize: 'clamp(0.6rem, 2vw, 0.75rem)', 
             fontFamily: 'Courier New',
             textTransform: 'uppercase',
-            letterSpacing: '0.1em'
+            letterSpacing: '0.1em',
+            whiteSpace: 'nowrap'
           }}>Hours</span>
         </div>
         
-        {/* Colon */}
-        <NixieDigit key="colon2" value=":" />
-        
         {/* Minutes */}
-        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem' }}>
-          <div style={{ display: 'flex', gap: '0.25rem' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 'clamp(0.25rem, 1vw, 0.5rem)', flexShrink: 0 }}>
+          <div style={{ display: 'flex', gap: 'clamp(0.1rem, 0.5vw, 0.25rem)' }}>
             <NixieDigit key={`m1-${minutes[0]}-${timeLeft.minutes}`} value={minutes[0]} />
             <NixieDigit key={`m2-${minutes[1]}-${timeLeft.minutes}`} value={minutes[1]} />
           </div>
           <span style={{ 
             color: '#e6b871', 
-            fontSize: '0.75rem', 
+            fontSize: 'clamp(0.6rem, 2vw, 0.75rem)', 
             fontFamily: 'Courier New',
             textTransform: 'uppercase',
-            letterSpacing: '0.1em'
+            letterSpacing: '0.1em',
+            whiteSpace: 'nowrap'
           }}>Minutes</span>
         </div>
         
-        {/* Colon */}
-        <NixieDigit key="colon3" value=":" />
-        
         {/* Seconds */}
-        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem' }}>
-          <div style={{ display: 'flex', gap: '0.25rem' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 'clamp(0.25rem, 1vw, 0.5rem)', flexShrink: 0 }}>
+          <div style={{ display: 'flex', gap: 'clamp(0.1rem, 0.5vw, 0.25rem)' }}>
             <NixieDigit key={`s1-${seconds[0]}-${timeLeft.seconds}`} value={seconds[0]} />
             <NixieDigit key={`s2-${seconds[1]}-${timeLeft.seconds}`} value={seconds[1]} />
           </div>
           <span style={{ 
             color: '#e6b871', 
-            fontSize: '0.75rem', 
+            fontSize: 'clamp(0.6rem, 2vw, 0.75rem)', 
             fontFamily: 'Courier New',
             textTransform: 'uppercase',
-            letterSpacing: '0.1em'
+            letterSpacing: '0.1em',
+            whiteSpace: 'nowrap'
           }}>Seconds</span>
         </div>
       </div>
