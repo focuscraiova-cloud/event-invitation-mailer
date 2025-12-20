@@ -13,7 +13,9 @@ const NixieDigit: React.FC<NixieDigitProps> = ({ value }) => {
         fontSize: '3rem', 
         fontFamily: 'Courier New',
         textShadow: '0 0 10px rgba(230, 184, 113, 0.8)',
-        padding: '0 0.5rem'
+        padding: '0 0.75rem',
+        flexShrink: 0,
+        lineHeight: '1'
       }}>
         :
       </div>
@@ -23,14 +25,20 @@ const NixieDigit: React.FC<NixieDigitProps> = ({ value }) => {
   // For digits, use the image
   const imageSource = `/images/${value}.png`
   return (
-    <div style={{ display: 'inline-block' }}>
+    <div style={{ 
+      display: 'inline-block',
+      flexShrink: 0,
+      maxWidth: '100%'
+    }}>
       <img 
         src={imageSource} 
         alt={value} 
         style={{ 
           maxWidth: '100%', 
           height: 'auto',
-          display: 'block'
+          display: 'block',
+          width: 'auto',
+          maxHeight: '80px'
         }} 
       />
     </div>

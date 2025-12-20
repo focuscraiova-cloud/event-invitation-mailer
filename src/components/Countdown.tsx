@@ -49,13 +49,18 @@ const Countdown = () => {
       flexDirection: 'column',
       alignItems: 'center', 
       justifyContent: 'center', 
-      gap: '1rem'
+      gap: '1rem',
+      padding: '1rem 2rem',
+      width: '100%',
+      boxSizing: 'border-box'
     }}>
       <div style={{ 
         display: 'flex', 
         alignItems: 'center', 
         justifyContent: 'center', 
-        gap: '0.5rem' 
+        gap: '0.75rem',
+        flexWrap: 'wrap',
+        maxWidth: '100%'
       }}>
         {/* Days */}
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem' }}>
