@@ -211,26 +211,29 @@ All colors MUST be HSL.
     }
   }
 
-  /* Nixie Text Characters - warm orange glow style */
+  /* Nixie Text Characters - warm radial glow style */
   .nixie-text-char {
     display: inline-block;
-    font-family: 'Courier New', monospace;
-    font-size: clamp(1.5rem, 5vw, 3rem);
+    font-family: 'Cinzel', serif;
+    font-size: clamp(1.5rem, 5vw, 3.5rem);
     font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
     color: transparent;
-    background: linear-gradient(180deg, #ff9500 0%, #ff6a00 50%, #cc4400 100%);
+    background: radial-gradient(
+      circle,
+      rgba(255, 215, 160, 0.95) 0%,
+      rgba(255, 180, 100, 0.9) 30%,
+      rgba(255, 140, 60, 0.85) 60%,
+      rgba(200, 80, 20, 0.7) 100%
+    );
     -webkit-background-clip: text;
     background-clip: text;
-    position: relative;
-    text-shadow: 
-      0 0 10px rgba(255, 140, 0, 0.9),
-      0 0 20px rgba(255, 120, 0, 0.8),
-      0 0 40px rgba(255, 100, 0, 0.6),
-      0 0 60px rgba(255, 80, 0, 0.4),
-      0 0 80px rgba(255, 60, 0, 0.3);
-    filter: brightness(1.2) drop-shadow(0 0 8px rgba(255, 140, 0, 0.8));
+    filter: 
+      drop-shadow(0 0 8px rgba(255, 180, 100, 0.9))
+      drop-shadow(0 0 20px rgba(255, 140, 60, 0.7))
+      drop-shadow(0 0 40px rgba(255, 100, 30, 0.5));
     transition: all 0.05s ease;
-    padding: 0.1rem 0.05rem;
   }
 
   /* Flicker animation for broken bulb effect */
@@ -241,48 +244,43 @@ All colors MUST be HSL.
   @keyframes nixie-broken-bulb {
     0% {
       opacity: 0.2;
-      filter: brightness(0.3) drop-shadow(0 0 2px rgba(255, 100, 0, 0.3));
+      filter: 
+        drop-shadow(0 0 2px rgba(255, 140, 60, 0.3));
     }
     20% {
       opacity: 1;
-      filter: brightness(1.5) drop-shadow(0 0 15px rgba(255, 140, 0, 1));
+      filter: 
+        drop-shadow(0 0 12px rgba(255, 200, 120, 1))
+        drop-shadow(0 0 30px rgba(255, 160, 80, 0.9));
     }
     40% {
       opacity: 0.15;
-      filter: brightness(0.2) drop-shadow(0 0 1px rgba(255, 80, 0, 0.2));
+      filter: 
+        drop-shadow(0 0 1px rgba(255, 100, 40, 0.2));
     }
     60% {
       opacity: 0.85;
-      filter: brightness(1.1) drop-shadow(0 0 10px rgba(255, 120, 0, 0.9));
+      filter: 
+        drop-shadow(0 0 10px rgba(255, 180, 100, 0.8))
+        drop-shadow(0 0 25px rgba(255, 140, 60, 0.6));
     }
     80% {
       opacity: 0.3;
-      filter: brightness(0.4) drop-shadow(0 0 3px rgba(255, 100, 0, 0.4));
+      filter: 
+        drop-shadow(0 0 3px rgba(255, 120, 50, 0.4));
     }
     100% {
       opacity: 1;
-      filter: brightness(1.2) drop-shadow(0 0 8px rgba(255, 140, 0, 0.8));
+      filter: 
+        drop-shadow(0 0 8px rgba(255, 180, 100, 0.9))
+        drop-shadow(0 0 20px rgba(255, 140, 60, 0.7))
+        drop-shadow(0 0 40px rgba(255, 100, 30, 0.5));
     }
   }
 
-  /* Container with dark inner glow */
+  /* Container - minimal dark background */
   .nixie-text-container {
-    padding: 1.5rem 2rem;
-    background: 
-      radial-gradient(ellipse at center, rgba(40, 20, 0, 0.4) 0%, rgba(0, 0, 0, 0.9) 70%),
-      repeating-radial-gradient(
-        circle at center,
-        transparent 0px,
-        transparent 8px,
-        rgba(60, 30, 0, 0.15) 8px,
-        rgba(60, 30, 0, 0.15) 10px
-      );
-    border-radius: 12px;
-    border: 2px solid rgba(255, 120, 0, 0.3);
-    box-shadow: 
-      0 0 40px rgba(255, 100, 0, 0.2),
-      0 0 80px rgba(255, 80, 0, 0.1),
-      inset 0 0 60px rgba(0, 0, 0, 0.9),
-      inset 0 0 20px rgba(255, 100, 0, 0.05);
+    padding: 1rem 1.5rem;
+    background: transparent;
   }
 }
