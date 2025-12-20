@@ -2,7 +2,6 @@ import { Button } from "@/components/ui/button";
 import Countdown from "@/components/Countdown";
 import NixieText from "@/components/NixieText";
 import focusLogo from "@/assets/focus-events-logo.png";
-import grinchImg from "@/assets/grinch.png";
 
 const Index = () => {
   return <div className="min-h-screen bg-black text-white flex flex-col items-center justify-center px-6 py-12">
@@ -11,20 +10,12 @@ const Index = () => {
         <img src={focusLogo} alt="Focus Events Logo" className="w-40 md:w-56 h-auto drop-shadow-[0_0_15px_rgba(230,184,113,0.5)] hover:drop-shadow-[0_0_25px_rgba(230,184,113,0.8)] transition-all duration-500" />
       </div>
 
-      {/* Event Teaser with Grinch */}
+      {/* Event Teaser */}
       <div className="text-center mb-8 animate-fade-in relative" style={{
       animationDelay: "0.2s"
     }}>
         {/* Event Title with Nixie Tube Style */}
         <div className="relative inline-block">
-          {/* Animated Grinch peeking */}
-          <img 
-            src={grinchImg} 
-            alt="Grinch" 
-            className="absolute -top-12 -right-8 w-16 md:w-20 animate-bounce z-10"
-            style={{ animationDuration: '2s' }}
-          />
-          
           {/* Nixie Tube Style Event Name */}
           <NixieText text="CHRISTMAS FLASHBACKS" className="mb-4" />
         </div>
