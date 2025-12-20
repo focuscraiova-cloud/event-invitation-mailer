@@ -29,17 +29,17 @@ const NixieDigit: React.FC<NixieDigitProps> = ({ value }) => {
       display: 'inline-block',
       flexShrink: 0,
       maxWidth: '100%',
-      width: 'clamp(30px, 8vw, 60px)'
+      width: 'clamp(30px, 8vw, 60px)',
+      height: 'clamp(40px, 10vw, 80px)'
     }}>
       <img 
         src={imageSource} 
         alt={value} 
         style={{ 
           maxWidth: '100%', 
-          height: 'auto',
+          height: '100%',
           display: 'block',
           width: '100%',
-          maxHeight: 'clamp(40px, 10vw, 80px)',
           objectFit: 'contain'
         }} 
       />
