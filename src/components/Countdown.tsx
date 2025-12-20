@@ -53,7 +53,8 @@ const Countdown = () => {
       padding: 'clamp(0.5rem, 2vw, 1rem) clamp(0.75rem, 3vw, 2rem)',
       width: '100%',
       boxSizing: 'border-box',
-      overflow: 'hidden'
+      overflow: 'hidden',
+      minHeight: '120px'
     }}>
       <div className="flex flex-col sm:flex-row items-center justify-center" style={{ 
         gap: 'clamp(1rem, 3vw, 1.5rem)',
