@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import NixieDigit from "./NixieDigit";
 
 interface TimeLeft {
   days: number;
@@ -36,31 +37,95 @@ const Countdown = () => {
     return () => clearInterval(timer);
   }, []);
 
-  const timeUnits = [
-    { value: timeLeft.days, label: "Days" },
-    { value: timeLeft.hours, label: "Hours" },
-    { value: timeLeft.minutes, label: "Minutes" },
-    { value: timeLeft.seconds, label: "Seconds" },
-  ];
+  // Format as DD:HH:MM:SS for display
+  const days = String(timeLeft.days).padStart(2, "0");
+  const hours = String(timeLeft.hours).padStart(2, "0");
+  const minutes = String(timeLeft.minutes).padStart(2, "0");
+  const seconds = String(timeLeft.seconds).padStart(2, "0");
 
   return (
-    <div className="flex gap-4 md:gap-6 animate-fade-in animation-delay-300">
-      {timeUnits.map((unit, index) => (
-        <div
-          key={unit.label}
-          className="flex flex-col items-center"
-          style={{ animationDelay: `${index * 100}ms` }}
-        >
-          <div className="bg-red-950/30 backdrop-blur-sm border border-red-500/40 rounded-lg w-16 h-16 md:w-20 md:h-20 flex items-center justify-center mb-2 shadow-[0_0_20px_rgba(239,68,68,0.4),0_0_40px_rgba(34,197,94,0.2)] hover:shadow-[0_0_30px_rgba(239,68,68,0.6),0_0_60px_rgba(34,197,94,0.3)] transition-shadow duration-300">
-            <span className="text-2xl md:text-3xl font-bold text-red-100 animate-pulse-subtle drop-shadow-[0_0_10px_rgba(239,68,68,0.8)]">
-              {String(unit.value).padStart(2, "0")}
-            </span>
+    <div style={{ 
+      display: 'flex', 
+      flexDirection: 'column',
+      alignItems: 'center', 
+      justifyContent: 'center', 
+      gap: '1rem'
+    }}>
+      <div style={{ 
+        display: 'flex', 
+        alignItems: 'center', 
+        justifyContent: 'center', 
+        gap: '0.5rem' 
+      }}>
+        {/* Days */}
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem' }}>
+          <div style={{ display: 'flex', gap: '0.25rem' }}>
+            <NixieDigit key={`d1-${days[0]}-${timeLeft.days}`} value={days[0]} />
+            <NixieDigit key={`d2-${days[1]}-${timeLeft.days}`} value={days[1]} />
           </div>
-          <span className="text-xs text-red-300/80 uppercase tracking-wider">
-            {unit.label}
-          </span>
+          <span style={{ 
+            color: '#e6b871', 
+            fontSize: '0.75rem', 
+            fontFamily: 'Courier New',
+            textTransform: 'uppercase',
+            letterSpacing: '0.1em'
+          }}>Days</span>
         </div>
-      ))}
+        
+        {/* Colon */}
+        <NixieDigit key="colon1" value=":" />
+        
+        {/* Hours */}
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem' }}>
+          <div style={{ display: 'flex', gap: '0.25rem' }}>
+            <NixieDigit key={`h1-${hours[0]}-${timeLeft.hours}`} value={hours[0]} />
+            <NixieDigit key={`h2-${hours[1]}-${timeLeft.hours}`} value={hours[1]} />
+          </div>
+          <span style={{ 
+            color: '#e6b871', 
+            fontSize: '0.75rem', 
+            fontFamily: 'Courier New',
+            textTransform: 'uppercase',
+            letterSpacing: '0.1em'
+          }}>Hours</span>
+        </div>
+        
+        {/* Colon */}
+        <NixieDigit key="colon2" value=":" />
+        
+        {/* Minutes */}
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem' }}>
+          <div style={{ display: 'flex', gap: '0.25rem' }}>
+            <NixieDigit key={`m1-${minutes[0]}-${timeLeft.minutes}`} value={minutes[0]} />
+            <NixieDigit key={`m2-${minutes[1]}-${timeLeft.minutes}`} value={minutes[1]} />
+          </div>
+          <span style={{ 
+            color: '#e6b871', 
+            fontSize: '0.75rem', 
+            fontFamily: 'Courier New',
+            textTransform: 'uppercase',
+            letterSpacing: '0.1em'
+          }}>Minutes</span>
+        </div>
+        
+        {/* Colon */}
+        <NixieDigit key="colon3" value=":" />
+        
+        {/* Seconds */}
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem' }}>
+          <div style={{ display: 'flex', gap: '0.25rem' }}>
+            <NixieDigit key={`s1-${seconds[0]}-${timeLeft.seconds}`} value={seconds[0]} />
+            <NixieDigit key={`s2-${seconds[1]}-${timeLeft.seconds}`} value={seconds[1]} />
+          </div>
+          <span style={{ 
+            color: '#e6b871', 
+            fontSize: '0.75rem', 
+            fontFamily: 'Courier New',
+            textTransform: 'uppercase',
+            letterSpacing: '0.1em'
+          }}>Seconds</span>
+        </div>
+      </div>
     </div>
   );
 };

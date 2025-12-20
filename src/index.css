@@ -103,3 +103,111 @@ All colors MUST be HSL.
     @apply bg-background text-foreground;
   }
 }
+
+@layer utilities {
+  /* Nixie Digit Module - Individual digit boxes */
+  .nixie-digit-module {
+    width: 3.5rem;
+    height: 4.5rem;
+    background: rgba(0, 0, 0, 0.95);
+    border: 1px solid rgba(251, 191, 36, 0.25);
+    border-radius: 6px;
+    box-shadow: 
+      0 0 15px rgba(251, 191, 36, 0.4),
+      inset 0 0 30px rgba(0, 0, 0, 0.9),
+      inset 0 1px 3px rgba(251, 191, 36, 0.1);
+    position: relative;
+    overflow: hidden;
+  }
+
+  @media (min-width: 768px) {
+    .nixie-digit-module {
+      width: 4.5rem;
+      height: 5.5rem;
+    }
+  }
+
+  /* Hexagonal Grid Pattern Background */
+  .nixie-hexagon-pattern {
+    opacity: 0.2;
+    background-image: 
+      repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 8px,
+        rgba(251, 191, 36, 0.08) 8px,
+        rgba(251, 191, 36, 0.08) 9px
+      ),
+      repeating-linear-gradient(
+        60deg,
+        transparent,
+        transparent 8px,
+        rgba(251, 191, 36, 0.08) 8px,
+        rgba(251, 191, 36, 0.08) 9px
+      ),
+      repeating-linear-gradient(
+        120deg,
+        transparent,
+        transparent 8px,
+        rgba(251, 191, 36, 0.08) 8px,
+        rgba(251, 191, 36, 0.08) 9px
+      );
+    background-size: 100% 100%;
+  }
+
+  /* Digit Container */
+  .nixie-digit-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    perspective: 200px;
+  }
+
+  /* Nixie Digit Styling */
+  .nixie-digit {
+    color: #fbbf24;
+    font-family: 'Courier New', monospace;
+    text-shadow: 
+      0 0 8px rgba(251, 191, 36, 1),
+      0 0 16px rgba(251, 191, 36, 0.8),
+      0 0 24px rgba(251, 191, 36, 0.6),
+      0 0 32px rgba(251, 191, 36, 0.4),
+      0 0 48px rgba(251, 191, 36, 0.2);
+    filter: brightness(1.2) drop-shadow(0 0 4px rgba(251, 191, 36, 0.8));
+    font-weight: 500;
+    letter-spacing: 0;
+  }
+
+  /* Colon Separator */
+  .nixie-colon {
+    color: #fbbf24;
+    font-family: 'Courier New', monospace;
+    text-shadow: 
+      0 0 8px rgba(251, 191, 36, 1),
+      0 0 16px rgba(251, 191, 36, 0.8),
+      0 0 24px rgba(251, 191, 36, 0.6);
+    filter: brightness(1.2);
+    padding: 0 0.25rem;
+    opacity: 0.9;
+  }
+
+  /* Number Flip Animation - authentic nixie tube flip effect */
+  .nixie-number-enter {
+    animation: nixie-number-flip 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-style: preserve-3d;
+  }
+
+  @keyframes nixie-number-flip {
+    0% {
+      transform: rotateX(90deg);
+      opacity: 0;
+    }
+    50% {
+      opacity: 0.3;
+    }
+    100% {
+      transform: rotateX(0deg);
+      opacity: 1;
+    }
+  }
+}
