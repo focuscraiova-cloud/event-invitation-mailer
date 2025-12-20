@@ -1,7 +1,9 @@
 import { Button } from "@/components/ui/button";
 import Countdown from "@/components/Countdown";
+import NixieText from "@/components/NixieText";
 import focusLogo from "@/assets/focus-events-logo.png";
 import grinchImg from "@/assets/grinch.png";
+
 const Index = () => {
   return <div className="min-h-screen bg-black text-white flex flex-col items-center justify-center px-6 py-12">
       {/* Logo - Restyled with glow effect */}
@@ -13,25 +15,21 @@ const Index = () => {
       <div className="text-center mb-8 animate-fade-in relative" style={{
       animationDelay: "0.2s"
     }}>
-        <p className="text-gray-400 text-sm uppercase tracking-widest mb-4 font-mono">
-      </p>
-        
-        {/* Event Title with Grinch */}
+        {/* Event Title with Nixie Tube Style */}
         <div className="relative inline-block">
           {/* Animated Grinch peeking */}
+          <img 
+            src={grinchImg} 
+            alt="Grinch" 
+            className="absolute -top-12 -right-8 w-16 md:w-20 animate-bounce z-10"
+            style={{ animationDuration: '2s' }}
+          />
           
-          
-          {/* Styled Christmas Flashbacks Title */}
-          <h1 className="text-3xl md:text-5xl font-bold mb-2 relative">
-            <span style={{
-            animationDuration: '3s'
-          }} className="bg-gradient-to-r from-red-500 via-green-400 to-red-500 bg-clip-text text-transparent animate-pulse drop-shadow-[0_0_30px_rgba(239,68,68,0.5)] text-center font-extrabold">CHRISTMAS FLASHBACKS</span>
-            <br />
-            <span className="text-2xl md:text-4xl font-light tracking-widest text-amber-200/90 drop-shadow-[0_0_10px_rgba(251,191,36,0.4)]"></span>
-          </h1>
+          {/* Nixie Tube Style Event Name */}
+          <NixieText text="CHRISTMAS FLASHBACKS" className="mb-4" />
         </div>
         
-        <p className="text-gray-500 mt-4">24 December 2025 • 22:00</p>
+        <p className="text-gray-500 mt-4 font-mono tracking-wider">24 December 2025 • 22:00</p>
       </div>
 
       {/* Countdown */}
