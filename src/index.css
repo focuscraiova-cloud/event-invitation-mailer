@@ -376,6 +376,17 @@ All colors MUST be HSL.
     background: transparent;
   }
 
+  @media (max-width: 640px) {
+    .nixie-text-char {
+      font-size: clamp(1.6rem, 9vw, 3.4rem);
+      letter-spacing: 0.06em;
+    }
+
+    .nixie-text-container {
+      padding: 0.5rem 0.75rem;
+    }
+  }
+
   /* Snowfall animation */
   .snowflake {
     animation: snowfall linear infinite;

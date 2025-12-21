@@ -6,17 +6,17 @@ import focusLogo from "@/assets/focus-events-logo.png";
 
 const Index = () => {
   return (
-    <div className="h-[100dvh] sm:min-h-screen bg-black text-white flex flex-col items-center justify-center gap-4 sm:gap-6 px-4 pt-2 pb-3 sm:pt-4 sm:pb-6 overflow-hidden relative">
+    <div className="h-[100svh] sm:min-h-screen bg-black text-white flex flex-col items-center justify-center gap-3 sm:gap-6 px-3 pt-0 pb-2 sm:px-4 sm:pt-4 sm:pb-6 overflow-hidden relative">
       {/* Snowfall Background */}
       <Snowfall />
 
       {/* Logo + Event Teaser */}
       <div className="flex flex-col items-center gap-0 md:gap-0 flex-shrink-0 z-10">
-        <div className="animate-scale-in mb-2 sm:mb-0">
+        <div className="animate-scale-in mt-2 mb-1 sm:mb-0">
           <img
             src={focusLogo}
             alt="Focus Events Logo"
-            className="w-auto h-auto max-h-[16vh] max-w-[70vw] sm:max-h-[18vh] sm:max-w-[80vw] md:max-h-[14vh] md:max-w-[32vw] drop-shadow-[0_0_6px_rgba(255,255,255,0.35)] logo-white logo-float"
+            className="w-auto h-auto max-h-[12vh] max-w-[65vw] sm:max-h-[18vh] sm:max-w-[80vw] md:max-h-[14vh] md:max-w-[32vw] drop-shadow-[0_0_6px_rgba(255,255,255,0.35)] logo-white logo-float"
           />
         </div>
 
@@ -30,12 +30,12 @@ const Index = () => {
       </div>
 
       {/* Countdown */}
-      <div className="flex-shrink-0 z-10 scale-90 sm:scale-100 origin-top">
+      <div className="flex-shrink-0 z-10 scale-80 sm:scale-100 origin-top">
         <Countdown />
       </div>
 
       {/* CTA Buttons */}
-      <div className="flex flex-col sm:flex-row gap-3 animate-fade-in flex-shrink-0 z-10 scale-95 sm:scale-100 origin-top" style={{ animationDelay: "0.4s" }}>
+      <div className="flex flex-col sm:flex-row gap-3 animate-fade-in flex-shrink-0 z-10 scale-90 sm:scale-100 origin-top" style={{ animationDelay: "0.4s" }}>
         <Button 
           className="bg-white/10 backdrop-blur-sm border border-white/30 text-white hover:bg-white hover:text-black hover:scale-105 active:scale-95 transition-all duration-300 px-6 py-4 text-xs uppercase tracking-wider" 
           onClick={() => window.open("/subscribe", "_blank")}
@@ -56,6 +56,7 @@ const Index = () => {
 };
 
 export default Index;
+
 
 
 
