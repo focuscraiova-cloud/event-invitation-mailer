@@ -11,8 +11,8 @@ const Index = () => {
       <Snowfall />
 
       {/* Logo */}
-      <div className="animate-scale-in flex-shrink-0 z-10 mt-4">
-        <img src={focusLogo} alt="Focus Events Logo" className="w-28 md:w-40 h-auto drop-shadow-[0_0_15px_rgba(230,184,113,0.5)]" />
+      <div className="animate-scale-in flex-shrink-0 z-10 mt-8">
+        <img src={focusLogo} alt="Focus Events Logo" className="w-36 md:w-48 h-auto drop-shadow-[0_0_15px_rgba(230,184,113,0.5)]" />
       </div>
 
       {/* Event Teaser */}
