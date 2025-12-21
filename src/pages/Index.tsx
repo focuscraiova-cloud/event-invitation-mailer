@@ -6,13 +6,13 @@ import focusLogo from "@/assets/focus-events-logo.png";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-black text-white flex flex-col items-center justify-center gap-6 px-4 pt-4 pb-6 overflow-x-hidden relative">
+    <div className="h-[100dvh] sm:min-h-screen bg-black text-white flex flex-col items-center justify-center gap-4 sm:gap-6 px-4 pt-2 pb-3 sm:pt-4 sm:pb-6 overflow-hidden relative">
       {/* Snowfall Background */}
       <Snowfall />
 
       {/* Logo + Event Teaser */}
       <div className="flex flex-col items-center gap-0 md:gap-0 flex-shrink-0 z-10">
-        <div className="animate-scale-in mb-4 sm:mb-0">
+        <div className="animate-scale-in mb-2 sm:mb-0">
           <img
             src={focusLogo}
             alt="Focus Events Logo"
@@ -20,7 +20,7 @@ const Index = () => {
           />
         </div>
 
-        <div className="flex flex-col items-center gap-3 text-center animate-fade-in -mt-[7.5rem] md:-mt-[8rem]" style={{ animationDelay: "0.2s" }}>
+        <div className="flex flex-col items-center gap-3 text-center animate-fade-in mt-0 md:mt-1" style={{ animationDelay: "0.2s" }}>
           <NixieText 
             text={"CHRISTMAS\nFLASHBACKS"} 
             flickerLines={[1]}
@@ -30,12 +30,12 @@ const Index = () => {
       </div>
 
       {/* Countdown */}
-      <div className="flex-shrink-0 z-10">
+      <div className="flex-shrink-0 z-10 scale-90 sm:scale-100 origin-top">
         <Countdown />
       </div>
 
       {/* CTA Buttons */}
-      <div className="flex flex-col sm:flex-row gap-3 animate-fade-in flex-shrink-0 z-10" style={{ animationDelay: "0.4s" }}>
+      <div className="flex flex-col sm:flex-row gap-3 animate-fade-in flex-shrink-0 z-10 scale-95 sm:scale-100 origin-top" style={{ animationDelay: "0.4s" }}>
         <Button 
           className="bg-white/10 backdrop-blur-sm border border-white/30 text-white hover:bg-white hover:text-black hover:scale-105 active:scale-95 transition-all duration-300 px-6 py-4 text-xs uppercase tracking-wider" 
           onClick={() => window.open("/subscribe", "_blank")}
@@ -56,6 +56,8 @@ const Index = () => {
 };
 
 export default Index;
+
+
 
 
 
