@@ -387,20 +387,16 @@ All colors MUST be HSL.
   }
 
   .logo-float {
-    animation: logo-scale 4s ease-in-out infinite;
+    animation: logo-fade 5s ease-in-out infinite;
   }
 
-  @keyframes logo-scale {
+  @keyframes logo-fade {
     0%,
     100% {
-      transform: scale(1);
-      opacity: 0;
-      filter: brightness(0) invert(1) drop-shadow(0 0 10px rgba(255, 220, 140, 0.6));
+      opacity: 0.6;
     }
     50% {
-      transform: scale(1.035);
       opacity: 1;
-      filter: brightness(0) invert(1) drop-shadow(0 0 18px rgba(255, 210, 120, 0.9));
     }
   }
 
