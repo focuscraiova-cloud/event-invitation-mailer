@@ -237,7 +237,7 @@ All colors MUST be HSL.
   }
 
   .nixie-flash-line .nixie-flicker {
-    animation: nixie-neon-flash 2.8s steps(6) infinite;
+    animation: nixie-neon-flash 3.6s steps(3) infinite;
   }
 
   .nixie-steady-line .nixie-text-char {
