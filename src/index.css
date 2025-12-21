@@ -211,13 +211,13 @@ All colors MUST be HSL.
     }
   }
 
-  /* Nixie Text Characters - warm radial glow style */
+  /* Nixie Text Characters - Bebas Neue warm glow style */
   .nixie-text-char {
     display: inline-block;
-    font-family: 'Cinzel', serif;
-    font-size: clamp(1.5rem, 5vw, 3.5rem);
-    font-weight: 700;
-    letter-spacing: 0.15em;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(2rem, 10vw, 5rem);
+    font-weight: 400;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
     color: transparent;
     background: radial-gradient(

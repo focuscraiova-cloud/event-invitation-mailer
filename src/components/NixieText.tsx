@@ -23,21 +23,25 @@ const NixieText = ({ text, className = "" }: NixieTextProps) => {
     return () => clearInterval(interval);
   }, []);
 
+  const lines = text.split("\n");
+
   return (
     <div className={`nixie-text-container ${className}`}>
-      <div className="flex flex-wrap justify-center gap-1 md:gap-2">
-        {text.split("").map((char, index) => (
-          <span
-            key={index}
-            className={`nixie-text-char ${flicker ? "nixie-flicker" : ""}`}
-            style={{
-              animationDelay: `${index * 0.02}s`,
-            }}
-          >
-            {char === " " ? "\u00A0" : char}
-          </span>
-        ))}
-      </div>
+      {lines.map((line, lineIndex) => (
+        <div key={lineIndex} className="flex flex-wrap justify-center">
+          {line.split("").map((char, index) => (
+            <span
+              key={index}
+              className={`nixie-text-char ${flicker ? "nixie-flicker" : ""}`}
+              style={{
+                animationDelay: `${(lineIndex * line.length + index) * 0.02}s`,
+              }}
+            >
+              {char === " " ? "\u00A0" : char}
+            </span>
+          ))}
+        </div>
+      ))}
     </div>
   );
 };
