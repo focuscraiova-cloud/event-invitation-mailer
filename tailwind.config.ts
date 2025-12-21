@@ -14,7 +14,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        'cinzel': ['Cinzel', 'serif'],
+        'bebas': ['Bebas Neue', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
