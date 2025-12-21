@@ -20,7 +20,7 @@ const Index = () => {
           />
         </div>
 
-        <div className="flex flex-col items-center gap-3 text-center animate-fade-in mt-0 md:mt-1" style={{ animationDelay: "0.2s" }}>
+        <div className="flex flex-col items-center gap-3 text-center animate-fade-in -mt-[7.5rem] md:-mt-[8rem]" style={{ animationDelay: "0.2s" }}>
           <NixieText 
             text={"CHRISTMAS\nFLASHBACKS"} 
             flickerLines={[1]}
@@ -56,9 +56,6 @@ const Index = () => {
 };
 
 export default Index;
-
-
-
 
 
 
