@@ -16,7 +16,7 @@ const Index = () => {
           <img
             src={focusLogo}
             alt="Focus Events Logo"
-            className="w-auto h-auto max-h-[12vh] max-w-[65vw] sm:max-h-[18vh] sm:max-w-[80vw] md:max-h-[14vh] md:max-w-[32vw] drop-shadow-[0_0_6px_rgba(255,255,255,0.35)] logo-white logo-float"
+            className="w-auto h-auto max-h-[15.6vh] max-w-[84.5vw] sm:max-h-[18vh] sm:max-w-[80vw] md:max-h-[14vh] md:max-w-[32vw] drop-shadow-[0_0_6px_rgba(255,255,255,0.35)] logo-white logo-float"
           />
         </div>
 
@@ -56,6 +56,7 @@ const Index = () => {
 };
 
 export default Index;
+
 
 
 
