@@ -20,7 +20,7 @@ const Index = () => {
           />
         </div>
 
-        <div className="flex flex-col items-center gap-2 text-center mt-1 animate-fade-in -mt-[7.5rem] md:-mt-[8rem]" style={{ animationDelay: "0.2s" }}>
+        <div className="flex flex-col items-center gap-2 text-center mt-1 animate-fade-in sm:mt-2 md:mt-3" style={{ animationDelay: "0.2s" }}>
           <NixieText 
             text={"CHRISTMAS\nFLASHBACKS"} 
             flickerLines={[1]}
