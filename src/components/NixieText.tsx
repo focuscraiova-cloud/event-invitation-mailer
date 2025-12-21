@@ -3,36 +3,31 @@ import { useEffect, useState } from "react";
 interface NixieTextProps {
   text: string;
   className?: string;
+  flickerLines?: number[];
 }
 
-const NixieText = ({ text, className = "" }: NixieTextProps) => {
-  const [flicker, setFlicker] = useState(false);
+const NixieText = ({ text, className = "", flickerLines = [] }: NixieTextProps) => {
+  const [activeFlicker, setActiveFlicker] = useState<Set<number>>(new Set());
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      // Trigger flicker every second
-      setFlicker(true);
-      // Quick flicker sequence (broken bulb effect)
-      setTimeout(() => setFlicker(false), 50);
-      setTimeout(() => setFlicker(true), 100);
-      setTimeout(() => setFlicker(false), 150);
-      setTimeout(() => setFlicker(true), 180);
-      setTimeout(() => setFlicker(false), 220);
-    }, 1000);
-
-    return () => clearInterval(interval);
-  }, []);
+    setActiveFlicker(new Set(flickerLines));
+  }, [flickerLines]);
 
   const lines = text.split("\n");
 
   return (
     <div className={`nixie-text-container ${className}`}>
       {lines.map((line, lineIndex) => (
-        <div key={lineIndex} className="flex flex-wrap justify-center">
+        <div
+          key={lineIndex}
+          className={`flex flex-wrap justify-center ${
+            lineIndex === 0 ? "nixie-steady-line" : lineIndex === 1 ? "nixie-flash-line" : ""
+          }`}
+        >
           {line.split("").map((char, index) => (
             <span
               key={index}
-              className={`nixie-text-char ${flicker ? "nixie-flicker" : ""}`}
+              className={`nixie-text-char ${activeFlicker.has(lineIndex) ? "nixie-flicker" : ""}`}
               style={{
                 animationDelay: `${(lineIndex * line.length + index) * 0.02}s`,
               }}
