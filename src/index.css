@@ -379,8 +379,6 @@ All colors MUST be HSL.
   /* Snowfall animation */
   .snowflake {
     animation: snowfall linear infinite;
-    filter: blur(var(--blur));
-    will-change: transform;
   }\n
   .logo-white {
     filter: brightness(0) invert(1);
@@ -402,19 +400,19 @@ All colors MUST be HSL.
 
   @keyframes snowfall {
     0% {
-      transform: translate3d(0, -10vh, 0);
+      transform: translateY(-10vh);
     }
     25% {
-      transform: translate3d(var(--sway), 25vh, 0);
+      transform: translateY(25vh);
     }
     50% {
-      transform: translate3d(0, 50vh, 0);
+      transform: translateY(50vh);
     }
     75% {
-      transform: translate3d(var(--sway), 75vh, 0);
+      transform: translateY(75vh);
     }
     100% {
-      transform: translate3d(var(--drift), 110vh, 0);
+      transform: translateY(110vh);
     }
   }
 }
