@@ -12,11 +12,11 @@ const Index = () => {
 
       {/* Logo + Event Teaser */}
       <div className="flex flex-col items-center gap-0 md:gap-0 flex-shrink-0 z-10">
-        <div className="animate-scale-in mb-9 sm:mb-0">
+        <div className="animate-scale-in mb-4 sm:mb-0">
           <img
             src={focusLogo}
             alt="Focus Events Logo"
-            className="w-[min(63vw,520px)] sm:w-[min(85vw,520px)] md:w-[min(60vw,340px)] h-auto drop-shadow-[0_0_15px_rgba(230,184,113,0.5)] logo-white logo-float"
+            className="w-auto h-auto max-h-[16vh] max-w-[70vw] sm:max-h-[18vh] sm:max-w-[80vw] md:max-h-[14vh] md:max-w-[32vw] drop-shadow-[0_0_6px_rgba(255,255,255,0.35)] logo-white logo-float"
           />
         </div>
 
