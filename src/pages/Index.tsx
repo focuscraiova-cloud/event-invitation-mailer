@@ -1,14 +1,10 @@
-import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import Countdown from "@/components/Countdown";
 import NixieText from "@/components/NixieText";
 import Snowfall from "@/components/Snowfall";
-import SignUpDialog from "@/components/SignUpDialog";
 import focusLogo from "@/assets/focus-events-logo.png";
 
 const Index = () => {
-  const [signUpOpen, setSignUpOpen] = useState(false);
-
   return (
     <div className="h-screen bg-black text-white flex flex-col items-center justify-between px-4 py-6 overflow-hidden relative">
       {/* Snowfall Background */}
@@ -34,7 +30,7 @@ const Index = () => {
       <div className="flex flex-col sm:flex-row gap-3 animate-fade-in flex-shrink-0 z-10" style={{ animationDelay: "0.4s" }}>
         <Button 
           className="bg-white/10 backdrop-blur-sm border border-white/30 text-white hover:bg-white hover:text-black hover:scale-105 active:scale-95 transition-all duration-300 px-6 py-4 text-xs uppercase tracking-wider" 
-          onClick={() => setSignUpOpen(true)}
+          onClick={() => window.open("/subscribe", "_blank")}
         >
           Sign Up
         </Button>
@@ -47,9 +43,6 @@ const Index = () => {
       <div className="text-center animate-fade-in flex-shrink-0 z-10" style={{ animationDelay: "0.6s" }}>
         <p className="text-gray-600 text-xs tracking-wider">focusevents.ro</p>
       </div>
-
-      {/* Sign Up Dialog */}
-      <SignUpDialog open={signUpOpen} onOpenChange={setSignUpOpen} />
     </div>
   );
 };
