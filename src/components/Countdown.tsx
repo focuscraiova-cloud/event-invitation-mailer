@@ -37,11 +37,46 @@ const Countdown = () => {
     return () => clearInterval(timer);
   }, []);
 
+  const isTimerUp = timeLeft.days === 0 && timeLeft.hours === 0 && timeLeft.minutes === 0 && timeLeft.seconds === 0;
+
   // Format as DD:HH:MM:SS for display
   const days = String(timeLeft.days).padStart(2, "0");
   const hours = String(timeLeft.hours).padStart(2, "0");
   const minutes = String(timeLeft.minutes).padStart(2, "0");
   const seconds = String(timeLeft.seconds).padStart(2, "0");
+
+  if (isTimerUp) {
+    return (
+      <div style={{ 
+        display: 'flex', 
+        flexDirection: 'column',
+        alignItems: 'center', 
+        justifyContent: 'center', 
+        gap: 'clamp(0.5rem, 2vw, 1rem)',
+        padding: 'clamp(0.5rem, 2vw, 1rem) clamp(0.75rem, 3vw, 2rem)',
+        width: '100%',
+        boxSizing: 'border-box',
+        overflow: 'hidden',
+        minHeight: '120px'
+      }}>
+        <div className="nixie-text-container">
+          <div className="flex flex-wrap justify-center nixie-flash-line">
+            {"LIVE NOW!".split("").map((char, index) => (
+              <span
+                key={index}
+                className="nixie-text-char-red nixie-flicker-red"
+                style={{
+                  animationDelay: `${index * 0.02}s`,
+                }}
+              >
+                {char === " " ? "\u00A0" : char}
+              </span>
+            ))}
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div style={{ 
